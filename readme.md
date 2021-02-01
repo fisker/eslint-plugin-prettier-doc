@@ -1,6 +1,6 @@
 # eslint-plugin-prettier-doc [![Coverage](https://img.shields.io/coveralls/github/fisker/eslint-plugin-prettier-doc?style=flat-square)](https://coveralls.io/github/fisker/eslint-plugin-prettier-doc)
 
-> ESLint rules for Prettier Doc.
+> ESLint rules for [Prettier Doc](https://github.com/prettier/prettier/blob/main/commands.md).
 
 ## Usage
 
