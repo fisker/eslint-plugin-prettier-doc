@@ -7,7 +7,7 @@
   "main": "./index.js",
   "license": "MIT",
   "scripts": {
-    "test": "nyc node test.js"
+    "test": "nyc node test.mjs"
   },
   "devDependencies": {
     "c8": "7.4.0",

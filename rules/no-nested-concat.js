@@ -23,7 +23,7 @@ module.exports = {
     type: 'suggestion',
     docs: {
       url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc/blob/main/no-nested-concat.js',
+        'https://github.com/fisker/eslint-plugin-prettier-doc#no-nested-concat',
     },
     messages: {
       [messageId]: 'Do not use `concat(…)` in `concat(…)`.',

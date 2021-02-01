@@ -18,7 +18,7 @@ module.exports = {
     type: 'suggestion',
     docs: {
       url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc/blob/main/no-single-doc-concat.js',
+        'https://github.com/fisker/eslint-plugin-prettier-doc#no-single-doc-concat',
     },
     messages: {
       [messageId]: 'Do not use `concat(…)` to concat single `Doc`.',

@@ -18,7 +18,7 @@ module.exports = {
     type: 'suggestion',
     docs: {
       url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc/blob/main/no-empty-flat-contents-for-if-break.js',
+        'https://github.com/fisker/eslint-plugin-prettier-doc#no-empty-flat-contents-for-if-break',
     },
     messages: {
       [messageId]: 'Do not pass empty `flatContents` to `ifBreak(…)`.',

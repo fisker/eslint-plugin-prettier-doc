@@ -1,14 +1,12 @@
-'use strict'
-
-const path = require('path')
-const { outdent } = require('outdent')
-const { RuleTester } = require('eslint')
-const { rules } = require('.')
+import path from 'path'
+import outdent from 'outdent'
+import { RuleTester } from 'eslint'
+import plugin from './index.js'
 
 const test = (ruleId, tests) => {
   new RuleTester({ parserOptions: { ecmaVersion: 2021 } }).run(
     ruleId,
-    rules[ruleId],
+    plugin.rules[ruleId],
     tests
   )
 }

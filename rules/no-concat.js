@@ -14,8 +14,7 @@ module.exports = {
   meta: {
     type: 'suggestion',
     docs: {
-      url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc/blob/main/no-concat.js',
+      url: 'https://github.com/fisker/eslint-plugin-prettier-doc#no-concat',
     },
     messages: {
       [messageId]: 'Use array directly instead of `concat(…)`.',
