@@ -1,17 +1,23 @@
-'use strict'
-
 const rules = [
   'no-concat',
   'no-empty-flat-contents-for-if-break',
   'no-nested-concat',
-  'no-single-doc-concat',
+  'no-single-document-concat',
 ]
 
-const definitions = Object.fromEntries(
-  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}`)])
+function fromEntries(pairs) {
+  const object = Object.create(null)
+  for (const [key, value] of pairs) {
+    object[key] = value
+  }
+  return object
+}
+
+const definitions = fromEntries(
+  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}.js`)])
 )
 
-const configs = Object.fromEntries(rules.map((ruleId) => [ruleId, 'error']))
+const configs = fromEntries(rules.map((ruleId) => [ruleId, 'error']))
 
 module.exports = {
   configs: {

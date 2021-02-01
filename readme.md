@@ -65,7 +65,7 @@ const doc = concat(['prettier', concat([line '(', line, ')'])])
 const doc = concat(['prettier', line '(', line, ')'])
 ```
 
-### no-single-doc-concat
+### no-single-document-concat
 
 > Single `Doc` should use directly.
 

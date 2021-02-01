@@ -2,21 +2,51 @@
   "name": "eslint-plugin-prettier-doc",
   "version": "1.0.0",
   "description": "ESLint rules for Prettier Doc.",
-  "author": "fisker",
-  "main": "./index.js",
+  "homepage": "https://github.com/fisker/eslint-plugin-prettier-doc#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/eslint-plugin-prettier-doc/issues"
+  },
+  "repository": "fisker/eslint-plugin-prettier-doc",
+  "funding": "https://github.com/fisker/eslint-plugin-prettier-doc?sponsor=1",
   "license": "MIT",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
+  "main": "./index.js",
   "scripts": {
-    "format": "prettier . --ignore-unknown --write",
-    "test": "nyc node test.mjs"
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "format:prettier": "yarn lint:prettier --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,cjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "test": "c8 node test.mjs"
   },
   "devDependencies": {
+    "@fisker/eslint-config": "4.1.1",
+    "@fisker/husky-config": "4.0.1",
+    "@fisker/lint-staged-config": "3.0.1",
+    "@fisker/prettier-config": "4.0.1",
     "c8": "7.4.0",
     "eslint": "7.19.0",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3",
+    "markdownlint-cli": "0.26.0",
+    "npm-run-all": "4.1.5",
     "outdent": "0.8.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sort-package-json": "1.48.1"
   },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

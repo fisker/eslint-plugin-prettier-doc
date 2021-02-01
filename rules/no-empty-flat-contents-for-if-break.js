@@ -1,5 +1,3 @@
-'use strict'
-
 // By @sosukesuzuki https://github.com/prettier/prettier/pull/10172
 
 const selector = [
@@ -41,7 +39,7 @@ module.exports = {
             const closingParenthesesToken = sourceCode.getLastToken(node)
             const commaTokenBefore = sourceCode.getTokenBefore(
               flatContents,
-              ({ type, value }) => type === 'Punctuator' && value === ','
+              ({type, value}) => type === 'Punctuator' && value === ','
             )
 
             return fixer.removeRange([

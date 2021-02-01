@@ -1,5 +1,3 @@
-'use strict'
-
 const selector = [
   'CallExpression',
   '[optional=false]',

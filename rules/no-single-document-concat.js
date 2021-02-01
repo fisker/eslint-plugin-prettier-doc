@@ -1,5 +1,3 @@
-'use strict'
-
 const selector = [
   'CallExpression',
   '[optional=false]',
@@ -11,14 +9,14 @@ const selector = [
   '[arguments.0.elements.0.type!="SpreadElement"]',
 ].join('')
 
-const messageId = 'no-single-doc-concat'
+const messageId = 'no-single-document-concat'
 
 module.exports = {
   meta: {
     type: 'suggestion',
     docs: {
       url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc#no-single-doc-concat',
+        'https://github.com/fisker/eslint-plugin-prettier-doc#no-single-document-concat',
     },
     messages: {
       [messageId]: 'Do not use `concat(…)` to concat single `Doc`.',

@@ -1,10 +1,11 @@
 import path from 'path'
 import outdent from 'outdent'
-import { RuleTester } from 'eslint'
+import {RuleTester} from 'eslint'
+// eslint-disable-next-line unicorn/import-index
 import plugin from './index.js'
 
 const test = (ruleId, tests) => {
-  new RuleTester({ parserOptions: { ecmaVersion: 2021 } }).run(
+  new RuleTester({parserOptions: {ecmaVersion: 2021}}).run(
     ruleId,
     plugin.rules[ruleId],
     tests
@@ -84,7 +85,7 @@ test('no-nested-concat', {
   ],
 })
 
-test('no-single-doc-concat', {
+test('no-single-document-concat', {
   valid: [
     'notConcat([doc])',
     'concat([doc], extraArgument)',
