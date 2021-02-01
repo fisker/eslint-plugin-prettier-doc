@@ -1,10 +1,23 @@
 'use strict'
 
+const rules = [
+  'no-concat',
+  'no-empty-flat-contents-for-if-break',
+  'no-nested-concat',
+  'no-single-doc-concat',
+]
+
+const definitions = Object.fromEntries(
+  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}`)])
+)
+
+const configs = Object.fromEntries(rules.map((ruleId) => [ruleId, 'error']))
+
 module.exports = {
-  rules: {
-    'no-concat': require('./rules/no-concat'),
-    'no-empty-flat-contents-for-if-break': require('./rules/no-empty-flat-contents-for-if-break'),
-    'no-nested-concat': require('./rules/no-nested-concat'),
-    'no-single-doc-concat': require('./rules/no-single-doc-concat'),
+  configs: {
+    recommended: {
+      rules: configs,
+    },
   },
+  rules: definitions,
 }

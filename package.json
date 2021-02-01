@@ -1,12 +1,12 @@
 {
-  "name": "eslint-plugin-prettier-internal-rules",
-  "version": "1.0.3",
-  "description": "Prettier internal eslint rules",
-  "private": true,
+  "name": "eslint-plugin-prettier-doc",
+  "version": "1.0.0",
+  "description": "ESLint rules for Prettier Doc.",
   "author": "fisker",
   "main": "./index.js",
   "license": "MIT",
   "scripts": {
+    "format": "prettier . --ignore-unknown --write",
     "test": "nyc node test.mjs"
   },
   "devDependencies": {
