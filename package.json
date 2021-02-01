@@ -1,0 +1,22 @@
+{
+  "name": "eslint-plugin-prettier-internal-rules",
+  "version": "1.0.3",
+  "description": "Prettier internal eslint rules",
+  "private": true,
+  "author": "fisker",
+  "main": "./index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "nyc node test.js"
+  },
+  "devDependencies": {
+    "c8": "7.4.0",
+    "eslint": "7.19.0",
+    "outdent": "0.8.0",
+    "prettier": "2.2.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  }
+}
