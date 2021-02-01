@@ -1,5 +1,7 @@
 'use strict'
 
+// By @sosukesuzuki https://github.com/prettier/prettier/pull/10172
+
 const selector = [
   'CallExpression',
   '[optional=false]',

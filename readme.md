@@ -4,19 +4,17 @@
 
 ## no-concat
 
-> `concat(…)` has been deprecated, use `array` instead.
+> `concat(…)` has been [deprecated](https://github.com/prettier/prettier/pull/9733), use `array` instead.
 
-**Please disable this rule, before fixing `no-nested-concat`, and `no-single-doc-concat` , they both relay on `concat(…)`**
-
-### Fail
+**Please disable this rule, before fixing `no-nested-concat`, and `no-single-doc-concat` , they both relay on checking `concat(…)` call**
 
 ```js
-const doc = concat(['prettier', line '(', line, ')'])
+// Fail
+const doc = concat(['prettier', line, '(', line, ')'])
 ```
 
-### Pass
-
 ```js
+// Pass
 const doc = ['prettier', line '(', line, ')']
 ```
 
@@ -24,31 +22,27 @@ const doc = ['prettier', line '(', line, ')']
 
 > The second argument (flatContents) for `ifBreak(…)` should omitted when it's empty.
 
-### Fail
-
 ```js
+// Fail
 const comma = ifBreak(',', '')
 ```
 
-### Pass
-
 ```js
+// Pass
 const comma = ifBreak(',')
 ```
 
 ## no-nested-concat
 
-> Should be flat nested `concat(…)`.
-
-### Fail
+> Nested `concat(…)` should be flatted.
 
 ```js
+// Fail
 const doc = concat(['prettier', concat([line '(', line, ')'])])
 ```
 
-### Pass
-
 ```js
+// Pass
 const doc = concat(['prettier', line '(', line, ')'])
 ```
 
@@ -59,11 +53,13 @@ const doc = concat(['prettier', line '(', line, ')'])
 ### Fail
 
 ```js
+// Fail
 const doc = concat(['prettier()'])
 ```
 
 ### Pass
 
 ```js
+// Pass
 const doc = 'prettier()'
 ```
