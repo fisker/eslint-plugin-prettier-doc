@@ -15,6 +15,10 @@
     "url": "https://www.fiskercheung.com/"
   },
   "main": "./index.js",
+  "files": [
+    "index.js",
+    "rules/"
+  ],
   "scripts": {
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
