@@ -1,4 +1,4 @@
-# eslint-plugin-prettier-doc
+# eslint-plugin-prettier-doc [![Coverage](https://img.shields.io/coveralls/github/fisker/eslint-plugin-prettier-doc?style=flat-square)](https://coveralls.io/github/fisker/eslint-plugin-prettier-doc)
 
 > ESLint rules for Prettier Doc.
 
@@ -21,7 +21,7 @@ Add `prettier-doc` to the `plugins` and `extends` section of your `.eslintrc` co
 
 This rule is fixable.
 
-**Please disable this rule, before fixing `no-nested-concat`, and `no-single-doc-concat` , they both relay on checking `concat(…)` call**
+**Please disable this rule before fixing `no-nested-concat`, and `no-single-doc-concat`, they both relay on checking `concat(…)` call**
 
 ```js
 // Fail
