@@ -17,7 +17,9 @@ const definitions = fromEntries(
   rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}.js`)])
 )
 
-const configs = fromEntries(rules.map((ruleId) => [ruleId, 'error']))
+const configs = fromEntries(
+  rules.map((ruleId) => [`prettier-doc/${ruleId}`, 'error'])
+)
 
 module.exports = {
   configs: {
