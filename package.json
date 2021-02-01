@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-prettier-doc",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "ESLint rules for Prettier Doc.",
   "homepage": "https://github.com/fisker/eslint-plugin-prettier-doc#readme",
   "bugs": {
