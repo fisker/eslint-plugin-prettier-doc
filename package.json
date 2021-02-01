@@ -28,7 +28,7 @@
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:package-json": "yarn run format:package-json --check",
     "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
-    "test": "c8 node test.mjs"
+    "test": "c8 --reporter=text --reporter=lcov node test.mjs"
   },
   "devDependencies": {
     "@fisker/eslint-config": "4.1.1",
