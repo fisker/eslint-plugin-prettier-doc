@@ -4,7 +4,7 @@
 
 ## Usage
 
-Add `prettier-doc` to the `plugins` and `extends` section of your `.eslintrc` configuration file.
+Add `prettier-doc` to the `plugins` and `extends` sections of your `.eslintrc` configuration file.
 
 ```json
 {
