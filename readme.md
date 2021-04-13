@@ -2,6 +2,12 @@
 
 > ESLint rules for [Prettier Doc](https://github.com/prettier/prettier/blob/main/commands.md).
 
+## Install
+
+```bash
+yarn add eslint-plugin-prettier-doc --dev
+```
+
 ## Usage
 
 Add `prettier-doc` to the `plugins` and `extends` sections of your `.eslintrc` configuration file.
@@ -30,7 +36,7 @@ const doc = concat(['prettier', line, '(', line, ')'])
 
 ```js
 // Pass
-const doc = ['prettier', line '(', line, ')']
+const doc = ['prettier', line, '(', line, ')']
 ```
 
 ### no-empty-flat-contents-for-if-break
@@ -57,12 +63,12 @@ This rule is fixable.
 
 ```js
 // Fail
-const doc = concat(['prettier', concat([line '(', line, ')'])])
+const doc = concat(['prettier', concat([line, '(', line, ')'])])
 ```
 
 ```js
 // Pass
-const doc = concat(['prettier', line '(', line, ')'])
+const doc = concat(['prettier', line, '(', line, ')'])
 ```
 
 ### no-single-document-concat
