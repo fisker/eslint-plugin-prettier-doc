@@ -38,7 +38,7 @@
   "devDependencies": {
     "@fisker/eslint-config": "4.1.5",
     "@fisker/husky-config": "4.0.3",
-    "@fisker/lint-staged-config": "3.0.3",
+    "@fisker/lint-staged-config": "3.0.4",
     "@fisker/prettier-config": "4.0.2",
     "c8": "7.7.1",
     "eslint": "7.24.0",
