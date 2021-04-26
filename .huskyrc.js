@@ -7,4 +7,6 @@
 
 /* @fisker/husky-config https://git.io/fjCe9 */
 
-module.exports = require('@fisker/husky-config')
+module.exports = require('@fisker/husky-config').overrides({
+  'commit-msg': undefined,
+})

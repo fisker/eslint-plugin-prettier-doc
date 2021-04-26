@@ -1,7 +1,6 @@
-import path from 'path'
+import path from 'node:path'
 import outdent from 'outdent'
 import {RuleTester} from 'eslint'
-// eslint-disable-next-line unicorn/import-index
 import plugin from './index.js'
 
 const test = (ruleId, tests) => {
