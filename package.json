@@ -39,7 +39,7 @@
     "@fisker/eslint-config": "6.0.0",
     "@fisker/husky-config": "4.0.4",
     "@fisker/lint-staged-config": "3.0.4",
-    "@fisker/prettier-config": "4.0.4",
+    "@fisker/prettier-config": "4.1.0",
     "c8": "7.7.1",
     "eslint": "7.25.0",
     "husky": "4.3.8",
