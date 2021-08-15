@@ -36,7 +36,7 @@
     "test": "c8 --reporter=text --reporter=lcov node test.mjs"
   },
   "devDependencies": {
-    "@fisker/eslint-config": "6.0.0",
+    "@fisker/eslint-config": "7.2.0",
     "@fisker/husky-config": "4.0.4",
     "@fisker/lint-staged-config": "3.0.4",
     "@fisker/prettier-config": "4.0.4",
