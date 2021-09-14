@@ -20,8 +20,7 @@ module.exports = {
   meta: {
     type: 'suggestion',
     docs: {
-      url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc#no-nested-concat',
+      url: 'https://github.com/fisker/eslint-plugin-prettier-doc#no-nested-concat',
     },
     messages: {
       [messageId]: 'Do not use `concat(…)` in `concat(…)`.',
@@ -40,7 +39,7 @@ module.exports = {
             // Remove `concat`
             yield fixer.remove(node.callee)
             const openingParenthesisToken = sourceCode.getTokenAfter(
-              node.callee
+              node.callee,
             )
             yield fixer.remove(openingParenthesisToken)
             const closingParenthesisToken = sourceCode.getLastToken(node)

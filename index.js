@@ -14,11 +14,11 @@ function fromEntries(pairs) {
 }
 
 const definitions = fromEntries(
-  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}.js`)])
+  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}.js`)]),
 )
 
 const configs = fromEntries(
-  rules.map((ruleId) => [`prettier-doc/${ruleId}`, 'error'])
+  rules.map((ruleId) => [`prettier-doc/${ruleId}`, 'error']),
 )
 
 module.exports = {
