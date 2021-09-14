@@ -15,8 +15,7 @@ module.exports = {
   meta: {
     type: 'suggestion',
     docs: {
-      url:
-        'https://github.com/fisker/eslint-plugin-prettier-doc#no-single-document-concat',
+      url: 'https://github.com/fisker/eslint-plugin-prettier-doc#no-single-document-concat',
     },
     messages: {
       [messageId]: 'Do not use `concat(…)` to concat single `Doc`.',
@@ -33,7 +32,7 @@ module.exports = {
           fix: (fixer) =>
             fixer.replaceText(
               node,
-              sourceCode.getText(node.arguments[0].elements[0])
+              sourceCode.getText(node.arguments[0].elements[0]),
             ),
         })
       },
