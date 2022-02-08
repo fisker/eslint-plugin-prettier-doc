@@ -1,6 +1,6 @@
 const selector = [
   'CallExpression',
-  '[optional=false]',
+  '[optional!=true]',
   '[callee.type="Identifier"]',
   '[callee.name="concat"]',
   '[arguments.length=1]',

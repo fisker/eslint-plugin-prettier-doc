@@ -2,7 +2,7 @@
 
 const selector = [
   'CallExpression',
-  '[optional=false]',
+  '[optional!=true]',
   '[callee.type="Identifier"]',
   '[callee.name="ifBreak"]',
   '[arguments.length=2]',
