@@ -24,6 +24,7 @@ const configs = fromEntries(
 module.exports = {
   configs: {
     recommended: {
+      plugins: ['prettier-doc'],
       rules: configs,
     },
   },

@@ -14,7 +14,6 @@ Add `prettier-doc` to the `plugins` and `extends` sections of your `.eslintrc` c
 
 ```json
 {
-  "plugins": ["prettier-doc"],
   "extends": ["plugin:prettier-doc/recommended"]
 }
 ```
