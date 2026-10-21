@@ -1,4 +1,15 @@
-# eslint-plugin-prettier-doc [![Coverage](https://img.shields.io/coveralls/github/fisker/eslint-plugin-prettier-doc?style=flat-square)](https://coveralls.io/github/fisker/eslint-plugin-prettier-doc)
+# eslint-plugin-prettier-doc
+
+[![Npm Version][package_version_badge]][package_link]
+[![MIT License][license_badge]][license_link]
+[![Coverage][coverage_badge]][coverage_link]
+
+[coverage_badge]: https://img.shields.io/codecov/c/github/fisker/eslint-plugin-prettier-doc.svg?style=flat-square
+[coverage_link]: https://app.codecov.io/gh/fisker/eslint-plugin-prettier-doc
+[license_badge]: https://img.shields.io/npm/l/eslint-plugin-prettier-doc.svg?style=flat-square
+[license_link]: https://github.com/fisker/eslint-plugin-prettier-doc/blob/main/license
+[package_version_badge]: https://img.shields.io/npm/v/eslint-plugin-prettier-doc.svg?style=flat-square
+[package_link]: https://www.npmjs.com/package/eslint-plugin-prettier-doc
 
 > ESLint rules for [Prettier Doc](https://github.com/prettier/prettier/blob/main/commands.md).
 
