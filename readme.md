@@ -40,9 +40,12 @@ import eslintPluginPrettierDoc from 'eslint-plugin-prettier-doc'
 export default [
   // ... your other eslint configs
   {
-    plugin: {'prettier-doc': eslintPluginPrettierDoc},
+    plugin: {
+      'prettier-doc': eslintPluginPrettierDoc,
+    },
     rules: {
       'prettier-doc/no-concat': 'error',
+      // ...
     },
   },
 ]
