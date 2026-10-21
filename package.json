@@ -45,6 +45,7 @@
     "@fisker/lint-staged-config": "4.0.1",
     "@fisker/markdownlint-cli2-config": "0.1.0",
     "@fisker/prettier-config": "6.0.1",
+    "@fisker/release-it-config": "6.0.2",
     "c8": "12.0.0",
     "del-cli": "8.0.1",
     "eslint": "10.13.0",
@@ -53,6 +54,7 @@
     "npm-run-all2": "9.0.3",
     "outdent": "0.8.0",
     "prettier": "3.9.10",
+    "release-it": "21.1.1",
     "sort-package-json": "4.1.0"
   },
   "packageManager": "yarn@4.18.1",
