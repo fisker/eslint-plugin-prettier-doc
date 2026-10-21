@@ -29,7 +29,7 @@ jobs:
           node-version: "lts/*"
 
       - name: Install Dependencies
-        run: yarn
+        run: yarn --no-immutable
 
       # - name: Build package
       #   run: yarn build
