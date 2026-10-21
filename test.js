@@ -1,14 +1,10 @@
 import path from 'node:path'
-import outdent from 'outdent'
+import {outdent} from 'outdent'
 import {RuleTester} from 'eslint'
 import plugin from './index.js'
 
 const test = (ruleId, tests) => {
-  new RuleTester({parserOptions: {ecmaVersion: 2021}}).run(
-    ruleId,
-    plugin.rules[ruleId],
-    tests,
-  )
+  new RuleTester().run(ruleId, plugin.rules[ruleId], tests)
 }
 
 test('no-concat', {

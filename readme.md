@@ -10,12 +10,31 @@ yarn add eslint-plugin-prettier-doc --dev
 
 ## Usage
 
-Add `prettier-doc` to the `plugins` and `extends` sections of your `.eslintrc` configuration file.
+Use `recommended` preset config
 
-```json
-{
-  "extends": ["plugin:prettier-doc/recommended"]
-}
+```js
+import eslintPluginPrettierDoc from 'eslint-plugin-prettier-doc'
+
+export default [
+  // ... your other eslint configs
+  eslintPluginPrettierDoc.configs.recommended,
+]
+```
+
+Or config manually
+
+```js
+import eslintPluginPrettierDoc from 'eslint-plugin-prettier-doc'
+
+export default [
+  // ... your other eslint configs
+  {
+    plugin: {'prettier-doc': eslintPluginPrettierDoc},
+    rules: {
+      'prettier-doc/no-concat': 'error',
+    },
+  },
+]
 ```
 
 ## Rules

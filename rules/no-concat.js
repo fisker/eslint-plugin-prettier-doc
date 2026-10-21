@@ -8,7 +8,7 @@ const selector = [
 
 const messageId = 'no-concat'
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {
