@@ -52,8 +52,7 @@ export default {
               yield fixer.remove(lastToken)
 
               // trailing comma
-              const lastElement =
-                concatParts.elements.at(-1)
+              const lastElement = concatParts.elements.at(-1)
               const penultimateToken = sourceCode.getTokenAfter(lastElement)
               if (
                 penultimateToken.type === 'Punctuator' &&
