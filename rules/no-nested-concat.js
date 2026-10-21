@@ -53,7 +53,7 @@ export default {
 
               // trailing comma
               const lastElement =
-                concatParts.elements[concatParts.elements.length - 1]
+                concatParts.elements.at(-1)
               const penultimateToken = sourceCode.getTokenAfter(lastElement)
               if (
                 penultimateToken.type === 'Punctuator' &&

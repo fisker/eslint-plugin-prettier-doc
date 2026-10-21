@@ -1,6 +1,6 @@
 import path from 'node:path'
-import {outdent} from 'outdent'
 import {RuleTester} from 'eslint'
+import {outdent} from 'outdent'
 import plugin from './index.js'
 
 const test = (ruleId, tests) => {

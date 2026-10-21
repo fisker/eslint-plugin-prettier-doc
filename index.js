@@ -1,5 +1,5 @@
-import * as rules from './rules/index.js'
 import packageJson from './package.json' with {type: 'json'}
+import * as rules from './rules/index.js'
 
 const namespace = 'prettier-doc'
 
