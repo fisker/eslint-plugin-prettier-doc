@@ -16,34 +16,39 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "./index.js",
   "files": [
     "index.js",
     "rules/"
   ],
   "scripts": {
     "dist": "run-p \"dist:*\"",
-    "dist:npm": "np --yolo --no-yarn",
-    "fix": "run-p \"fix:*\"",
+    "dist:npm": "release-it",
+    "fix": "run-p --continue-on-error \"fix:*\"",
     "fix:eslint": "yarn lint:eslint --fix",
     "fix:markdown": "yarn lint:markdown --fix",
     "fix:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
-    "fix:prettier": "yarn lint:prettier --write",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint \"**/*.{js,mjs,cjs,vue}\"",
-    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "fix:prettier": "prettier . --write",
+    "lint": "run-p --continue-on-error \"lint:*\"",
+    "lint:eslint": "eslint .",
+    "lint:markdown": "markdownlint-cli2",
     "lint:package-json": "yarn run fix:package-json --check",
-    "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:prettier": "prettier . --check",
     "release": "run-s lint test dist",
     "test": "node test.js",
-    "test-coverage": "c8 --reporter=text --reporter=lcov yarn test"
+    "test-coverage": "c8 --reporter=text --reporter=lcov yarn test",
+    "clean": "run-p \"clean:*\"",
+    "clean:dist": "del-cli dist"
   },
   "devDependencies": {
     "@fisker/eslint-config": "16.1.1",
+    "@fisker/lint-staged-config": "4.0.1",
+    "@fisker/markdownlint-cli2-config": "0.1.0",
     "@fisker/prettier-config": "6.0.1",
     "c8": "12.0.0",
+    "del-cli": "8.0.1",
     "eslint": "10.13.0",
-    "markdownlint-cli": "0.49.1",
+    "lint-staged": "17.6.0",
+    "markdownlint-cli2": "0.24.0",
     "npm-run-all2": "9.0.3",
     "outdent": "0.8.0",
     "prettier": "3.9.10",
@@ -52,5 +57,7 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "exports": "./index.js",
+  "packageManager": "yarn@4.18.1"
 }
