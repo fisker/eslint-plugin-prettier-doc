@@ -13,7 +13,7 @@ const selector = [
 
 const messageId = 'no-empty-flat-contents-for-if-break'
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {
@@ -25,8 +25,6 @@ module.exports = {
     fixable: 'code',
   },
   create(context) {
-    const sourceCode = context.getSourceCode()
-
     return {
       [selector](node) {
         const [, flatContents] = node.arguments
@@ -35,6 +33,7 @@ module.exports = {
           node: flatContents,
           messageId,
           fix(fixer) {
+            const {sourceCode} = context
             const closingParenthesesToken = sourceCode.getLastToken(node)
             const commaTokenBefore = sourceCode.getTokenBefore(
               flatContents,

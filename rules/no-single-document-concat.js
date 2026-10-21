@@ -11,7 +11,7 @@ const selector = [
 
 const messageId = 'no-single-document-concat'
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {
@@ -23,7 +23,6 @@ module.exports = {
     fixable: 'code',
   },
   create(context) {
-    const sourceCode = context.getSourceCode()
     return {
       [selector](node) {
         context.report({
@@ -32,7 +31,7 @@ module.exports = {
           fix: (fixer) =>
             fixer.replaceText(
               node,
-              sourceCode.getText(node.arguments[0].elements[0]),
+              context.sourceCode.getText(node.arguments[0].elements[0]),
             ),
         })
       },

@@ -1,32 +1,21 @@
-const rules = [
-  'no-concat',
-  'no-empty-flat-contents-for-if-break',
-  'no-nested-concat',
-  'no-single-document-concat',
-]
+import packageJson from './package.json' with {type: 'json'}
+import * as rules from './rules/index.js'
 
-function fromEntries(pairs) {
-  const object = Object.create(null)
-  for (const [key, value] of pairs) {
-    object[key] = value
-  }
-  return object
+const namespace = 'prettier-doc'
+
+const plugin = {
+  meta: {name: packageJson.name, version: packageJson.version, namespace},
+  configs: {},
+  rules,
 }
 
-const definitions = fromEntries(
-  rules.map((ruleId) => [ruleId, require(`./rules/${ruleId}.js`)]),
-)
-
-const configs = fromEntries(
-  rules.map((ruleId) => [`prettier-doc/${ruleId}`, 'error']),
-)
-
-module.exports = {
-  configs: {
-    recommended: {
-      plugins: ['prettier-doc'],
-      rules: configs,
-    },
+plugin.configs.recommended = {
+  plugins: {
+    [namespace]: plugin,
   },
-  rules: definitions,
+  rules: Object.fromEntries(
+    Object.keys(rules).map((ruleId) => [`${namespace}/${ruleId}`, 'error']),
+  ),
 }
+
+export default plugin

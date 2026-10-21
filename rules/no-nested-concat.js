@@ -16,7 +16,7 @@ const selector = [
 
 const messageId = 'no-nested-concat'
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {
@@ -28,14 +28,13 @@ module.exports = {
     fixable: 'code',
   },
   create(context) {
-    const sourceCode = context.getSourceCode()
-
     return {
       [selector](node) {
         context.report({
           node,
           messageId,
           *fix(fixer) {
+            const {sourceCode} = context
             // Remove `concat`
             yield fixer.remove(node.callee)
             const openingParenthesisToken = sourceCode.getTokenAfter(
@@ -53,8 +52,7 @@ module.exports = {
               yield fixer.remove(lastToken)
 
               // trailing comma
-              const lastElement =
-                concatParts.elements[concatParts.elements.length - 1]
+              const lastElement = concatParts.elements.at(-1)
               const penultimateToken = sourceCode.getTokenAfter(lastElement)
               if (
                 penultimateToken.type === 'Punctuator' &&
